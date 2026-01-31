@@ -1,0 +1,28 @@
+# --- Redirections Cloudflare Pages (Generic) ---
+
+# 1. Redirections Principales (Main Pages)
+/contact/       /index.html#contact     301
+/contact        /index.html#contact     301
+/services/      /index.html#services    301
+/services       /index.html#services    301
+/about/         /index.html             301
+/a-propos/      /index.html             301
+/tarifs/        /index.html#prix        301
+/prix/          /index.html#prix        301
+
+# 2. Redirections Langue (Si ancien site avait /en/)
+/en/            /index-en.html          301
+/en/contact/    /index-en.html#contact  301
+
+# 3. Sécurité & Nettoyage WP
+/wp-admin*      /                       301
+/wp-login.php   /                       301
+/feed/*         /                       301
+/xmlrpc.php     /                       301
+
+# 4. Catch-all (Optionnel : rediriger tout le reste vers l'accueil si 404)
+# Décommenter la ligne suivante si vous préférez l'accueil plutôt qu'une page 404
+# /*            /index.html             301
+
+# 5. Forcer HTTPS (Géré souvent par défaut mais bonne pratique)
+http://*        https://ramasseviterivesud.com/:splat   301
